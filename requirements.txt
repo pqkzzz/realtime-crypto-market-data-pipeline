@@ -1,0 +1,4 @@
+confluent-kafka
+websocket-client
+clickhouse-connect
+python-dotenv
