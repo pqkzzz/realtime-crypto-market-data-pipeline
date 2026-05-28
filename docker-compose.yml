@@ -5,6 +5,10 @@ services:
     ports:
       - "8123:8123"
       - "9000:9000"
+    environment:
+      CLICKHOUSE_DB: crypto
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-changeme}
     volumes:
       - ./sql/create_clickhouse_tables.sql:/docker-entrypoint-initdb.d/create_clickhouse_tables.sql
 
